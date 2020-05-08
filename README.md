@@ -18,8 +18,8 @@
 
 * [Personal access tokens](https://github.com/settings/tokens/new)에서 Token을 생성합니다.
 
-    - Select scopes은 자유롭게 선택하셔도 됩니다.
-
+    - Select scopes은 `repo`와 `gist`를 추가합니다.
+    
     - 생성 후 Token Key 값을 GH_TOKEN 값으로 사용해야하기 때문에 기록해둡니다.
     
 ![2](https://user-images.githubusercontent.com/18522341/80913346-e411f800-8d7e-11ea-9f60-f1415a8228db.jpg)
