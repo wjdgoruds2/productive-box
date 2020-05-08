@@ -38,7 +38,7 @@
 
 > Step 4
 
-* Repository -> Settings -> Secrets에서 **GIST_ID**와 **GH_TOKEN**를 생성해줍니다.
+* Repository -> Settings -> Secrets에서 `GIST_ID`와 `GH_TOKEN`를 생성해줍니다.
 
     - GIST_ID : [Gist](https://gist.github.com/)를 만들고 생긴 Key 값
 
