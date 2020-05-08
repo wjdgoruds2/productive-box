@@ -6,7 +6,7 @@
 
 * Public으로 [Gist](https://gist.github.com/)를 생성합니다. 
 
-    - 생서시 입력한 제목과 내용은 어차피 Override 되기 때문에 편하게 Gist를 생성합니다.
+    - 생성시 입력한 제목과 내용은 어차피 Override 되기 때문에 편하게 Gist를 생성합니다.
 
     - 그리고 사진 속에 표시된 값을 GIST_ID로 사용해야 하기 때문에 기록해둡니다.
     
