@@ -1,48 +1,65 @@
-<p align="center">
-  <a href="http://lovera.maxam.now.sh/">
-    <img src="https://user-images.githubusercontent.com/25841814/79395484-5081ae80-7fac-11ea-9e27-ac91472e31dd.png" alt="screenshot" width="500">
-  </a>
-  <h3 align="center">📌✨productive-box</h3>
-</p>
 
-<p align="center">
-   <img src="https://img.shields.io/badge/language-typescript-blue?style"/>
-   <img src="https://img.shields.io/github/license/maxam2017/productive-box"/>
-   <img src="https://img.shields.io/github/stars/maxam2017/productive-box"/>
-   <img src="https://img.shields.io/github/forks/maxam2017/productive-box"/>
-</p>
-<p align="center">
-   Are you an early 🐤 or a night 🦉?
-   <br/>
-   When are you most productive during the day?
-   <br/>
-   Let's check out in gist!
-</p>
-
----
-
-> This project is inspired by an awesome pinned-gist project.<br/>Find more in https://github.com/matchai/awesome-pinned-gists
-
-## Overview
-This project uses GitHub graphQL API to get the commit histories and write into the gist by [rest.js](https://github.com/octokit/rest.js#readme)
 
 ## Setup
 
-### Prep work
-1. Create a new public GitHub Gist (https://gist.github.com/)
-2. Create a token with the `gist` and `repo` scope and copy it. (https://github.com/settings/tokens/new)
-   > enable `repo` scope seems **DANGEROUS**<br/>
-   > but this GitHub Action only accesses your commit timestamp in repository you contributed.
+> Step 1
 
-### Project setup
+* Public으로 [Gist](https://gist.github.com/)를 생성합니다. 
 
-1. Fork this repo
-2. Edit the [environment variable](https://github.com/maxam2017/productive-box/blob/master/.github/workflows/schedule.yml#L17-L18) in `.github/workflows/schedule.yml`:
+    - 생서시 입력한 제목과 내용은 어차피 Override 되기 때문에 편하게 Gist를 생성합니다.
 
-   - **GIST_ID:** The ID portion from your gist url: `https://gist.github.com/maxam2017/`**`9842e074b8ee46aef76fd0d493bae0ed`**.
-   - **LOCALE:** The locale of your country, eg. `zh-TW` for Taiwan, `en-US` for America, etc.
+    - 그리고 사진 속에 표시된 값을 GIST_ID로 사용해야 하기 때문에 기록해둡니다.
+    
+![1](https://user-images.githubusercontent.com/18522341/80913341-deb4ad80-8d7e-11ea-9417-49a901680143.jpg)
 
-3. Go to the repo **Settings > Secrets**
-4. Add the following environment variables:
-   - **GH_TOKEN:** The GitHub token generated above.
-5. [Pin the newly created Gist](https://help.github.com/en/github/setting-up-and-managing-your-github-profile/pinning-items-to-your-profile)
+---
+
+> Step 2
+
+* [Personal access tokens](https://github.com/settings/tokens/new)에서 Token을 생성합니다.
+
+    - Select scopes은 자유롭게 선택하셔도 됩니다.
+
+    - 생성 후 Token Key 값을 GH_TOKEN 값으로 사용해야하기 때문에 기록해둡니다.
+    
+![2](https://user-images.githubusercontent.com/18522341/80913346-e411f800-8d7e-11ea-9f60-f1415a8228db.jpg)
+
+---
+
+> Step 3
+
+* Repository를 Fork 합니다.
+
+* 그리고 Fork한 Repository에서 Actions 탭을 누른 후 활성화 시켜줍니다.
+
+![3](https://user-images.githubusercontent.com/18522341/80913443-9d70cd80-8d7f-11ea-86b6-cb6416c7ad33.jpg)
+
+---
+
+> Step 4
+
+* Repository -> Settings -> Secrets에서 **GIST_ID**와 **GH_TOKEN**를 생성해줍니다.
+
+    - GIST_ID : [Gist](https://gist.github.com/)를 만들고 생긴 Key 값
+
+    - GH_TOKEN : [Personal access tokens](https://github.com/settings/tokens/new)에서 생성한 Token 값
+    
+    
+![4](https://user-images.githubusercontent.com/18522341/80913347-e5dbbb80-8d7e-11ea-820d-e1f09d9a84d9.jpg)
+
+---
+
+> Step 5
+
+* 자신의 Gihub Home에서 생성한 Gist를 Pin으로 등록해줍니다.
+
+![5](https://user-images.githubusercontent.com/18522341/80913348-e70ce880-8d7e-11ea-8823-e13684a85432.jpg)
+
+---
+
+> Step 6
+
+* 정상적으로 노출이 되는지 확인합니다.
+
+![6](https://user-images.githubusercontent.com/18522341/80913421-73b7a680-8d7f-11ea-984c-3824292646f6.jpg)
+
